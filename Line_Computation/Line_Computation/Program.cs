@@ -32,20 +32,23 @@ namespace Line_Computation
             Console.WriteLine("Enter the value of Y4 coordinate: ");
             int y4= Convert.ToInt32(Console.ReadLine());
 
-            double LengthOfLine1 = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
-            Console.WriteLine("Length of Line1 is :" + LengthOfLine1);
+            double Line1 = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+            Console.WriteLine("Length of Line1 is :" +Line1);
 
-            double LengthOfLine2=Math.Sqrt(Math.Pow((x4-x3),2)+Math.Pow((y4-y3),2));
-            Console.WriteLine("Length of Line2 is:" + LengthOfLine2);
+            double Line2=Math.Sqrt(Math.Pow((x4-x3),2)+Math.Pow((y4-y3),2));
+            Console.WriteLine("Length of Line2 is:" +Line2);
+            double differentiate= Line1.CompareTo(Line2);
 
-            if (LengthOfLine1.Equals(LengthOfLine2)== true)
+
+            if (differentiate>=0)
             {
-                Console.WriteLine("Length of line1 and Line2 are equal");
+                Console.WriteLine("line1 is greater than Line2");
             }
             else
             {
-                Console.WriteLine("Length of Line1 and Line2 are not equal");
+                Console.WriteLine(" Line2 is greater than Line1");
             }
+           
 
             Console.ReadLine();
         }
